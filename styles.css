@@ -1,0 +1,83 @@
+.navigation_bar {
+    height: 60px;
+    display: flex;
+    padding: 6px;
+    justify-content: space-around;
+    margin: 8px;
+    align-items: center;
+}
+.nav_item {
+    border: none;
+    background-color: white;
+    color: black;
+    font-weight: 400;
+    line-height: 1.4;
+    font-size: 0.87rem;
+    cursor: pointer;
+    margin: 3px;
+    width: max-content;
+    white-space: nowrap;
+}
+.navigation_bar form {
+    margin: auto;
+}
+
+.search {
+    display: flex;
+    min-width: 300px;
+    width: 100%;
+    margin-right: 90px;
+    position: relative;
+    right: 10px;
+}
+.search_bar {
+    border: 1px solid black;
+    padding: 0px 2.4rem 0px 2.4rem;
+    display: flex;
+    align-items: stretch;
+    border-radius: 30px;
+    width: 100%;
+    height: 47px;
+    margin-right: 2px;
+    background-color: rgba(0, 0, 0, 0.029);
+}
+.sign_up {
+    background-color: black;
+    color: white;
+    font-weight: 900;
+    height: 40px;
+    width: max-content;
+    padding: 0px 15px 0px 15px;
+}
+.log_in {
+    border: 1px solid black;
+    font-weight: 900;
+    height: 40px;
+    width: max-content;
+    padding: 0px 20px 0px 20px;
+}
+.search_button {
+    border: none;
+    position: relative;
+    background: rgba(76, 175, 80, 0);
+    left: 35px;
+}
+
+.logo {
+    border: none;
+    height: 2.1rem;
+    background-color: white;
+    position: relative;
+    top: 4px;
+}
+
+.globe {
+    border: 1px solid black;
+    margin-right: 8px;
+    padding: 11px 14px;
+    height: max-content;
+}
+.cart {
+    padding: 11px 14px;
+    height: max-content;
+}
