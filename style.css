@@ -1,11 +1,16 @@
 /* Navigatin Bar */
+body {
+    margin: 0;
+}
 nav {
     height: 60px;
     display: flex;
-    padding: 6px;
+    padding: 9px;
     justify-content: flex-end;
-    margin: 8px;
     align-items: center;
+    box-shadow: 5px 5px 16px rgba(128, 128, 128, 0.382);
+    z-index: 1;
+    position: relative;
 }
 
 nav button {
@@ -31,7 +36,7 @@ nav form {
 }
 
 nav form input {
-    border: 1px solid black;
+    border: 0.1em solid black;
     padding: 0px 2.4rem 0px 2.4rem;
     display: flex;
     align-items: stretch;
@@ -87,14 +92,44 @@ nav form button {
     border: 1px solid black;
     margin-right: 8px;
     padding: 11px 14px;
-    height: max-content;
+    height: 40px;
 }
-/* ----------- */
+
+.page {
+    width: 90%;
+    margin: auto;
+}
 
 /* Header  */
 
 header {
-    border: 2px solid red;
+    z-index: -1;
+    display: flex;
+}
+header div {
+    height: 400px;
+    width: 83rem;
+    background-image: url(assets/alarm_background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: auto;
+}
+header div div {
+    border: none;
+    font-size: 19px;
+    height: 42%;
+    width: 29%;
+    min-height: 42%;
+    min-width: 337px;
+    display: inline-block;
+    background-image: none;
+    background-color: white;
+    padding: 0.1rem 1.3rem 2.3rem 1.3rem;
+    position: relative;
+    top: 15%;
+    left: 5%;
+    box-shadow: 1px 1px 19px rgba(128, 128, 128, 0.31);
+    line-height: 29px;
 }
 
 @media (max-width: 1300px) {
