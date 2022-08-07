@@ -2,7 +2,7 @@
     height: 60px;
     display: flex;
     padding: 6px;
-    justify-content: space-around;
+    justify-content: flex-end;
     margin: 8px;
     align-items: center;
 }
@@ -24,7 +24,6 @@
 
 .search {
     display: flex;
-    min-width: 300px;
     width: 100%;
     margin-right: 90px;
     position: relative;
@@ -80,4 +79,39 @@
 .cart {
     padding: 11px 14px;
     height: max-content;
+}
+
+@media (max-width: 1300px) {
+    .udemy_business {
+        display: none;
+    }
+}
+@media (max-width: 950px) {
+    .udemy_teach {
+        display: none;
+    }
+}
+@media (max-width: 833px) {
+    .cat {
+        display: none;
+    }
+}
+@media (max-width: 692px) {
+    .search {
+        visibility: hidden;
+    }
+    .cart {
+        display: none;
+    }
+}
+
+@media (max-width: 500px) {
+    .globe,
+    .search {
+        display: none;
+    }
+    .navigation_bar {
+        flex-direction: column;
+        margin-top: 40px;
+    }
 }
