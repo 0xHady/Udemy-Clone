@@ -1,3 +1,4 @@
+/* Navigatin Bar */
 nav {
     height: 60px;
     display: flex;
@@ -87,6 +88,13 @@ nav form button {
     margin-right: 8px;
     padding: 11px 14px;
     height: max-content;
+}
+/* ----------- */
+
+/* Header  */
+
+header {
+    border: 2px solid red;
 }
 
 @media (max-width: 1300px) {
