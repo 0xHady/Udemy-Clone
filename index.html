@@ -4,8 +4,8 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-        <link rel="stylesheet" href="styles.css" />
+        <title>Udemy Clone</title>
+        <link rel="stylesheet" href="style.css" />
         <link
             href="https://fonts.googleapis.com/icon?family=Material+Icons"
             rel="stylesheet"
@@ -16,49 +16,42 @@
         />
     </head>
     <body>
+        <nav>
+            <button>
+                <img
+                    class="logo"
+                    src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg"
+                    alt="udemy logo"
+                />
+            </button>
+
+            <button class="cat" type="button">Categories</button>
+
+            <!-- Search  -->
+            <form action="nothing">
+                <button type="submit"><i class="fa fa-search"></i></button>
+                <input type="text" placeholder="Search for anything" />
+            </form>
+            <!-- ----- -->
+
+            <button class="udemy_business" type="button">Udemy Business</button>
+
+            <button class="udemy_teach" type="button">Teach on Udemy</button>
+
+            <button class="cart" type="button">
+                <i class="material-icons">shopping_cart</i>
+            </button>
+
+            <button class="log_in" type="button">Log in</button>
+
+            <button class="sign_up" type="button">Sign up</button>
+
+            <button class="globe">
+                <i class="fa fa-globe"></i>
+            </button>
+        </nav>
         <div class="page">
-            <div class="navigation_bar">
-                <button class="nav_item">
-                    <img
-                        class="logo"
-                        src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg"
-                        alt="udemy logo"
-                    />
-                </button>
-
-                <button class="nav_item cat" type="button">Categories</button>
-
-                <form action="somewhere" class="search">
-                    <button class="search_button" type="submit">
-                        <i class="fa fa-search"></i>
-                    </button>
-                    <input
-                        class="search_bar"
-                        type="text"
-                        placeholder="Search for anything"
-                    />
-                </form>
-
-                <button class="nav_item udemy_business" type="button">
-                    Udemy Business
-                </button>
-
-                <button class="nav_item udemy_teach" type="button">
-                    Teach on Udemy
-                </button>
-
-                <button class="cart nav_item" type="button">
-                    <i class="material-icons">shopping_cart</i>
-                </button>
-
-                <button class="nav_item log_in" type="button">Log in</button>
-
-                <button class="nav_item sign_up" type="button">Sign up</button>
-
-                <button class="nav_item globe">
-                    <i class="fa fa-globe"></i>
-                </button>
-            </div>
+            <header></header>
         </div>
     </body>
 </html>

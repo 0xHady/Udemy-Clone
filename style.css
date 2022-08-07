@@ -1,4 +1,4 @@
-.navigation_bar {
+nav {
     height: 60px;
     display: flex;
     padding: 6px;
@@ -6,7 +6,8 @@
     margin: 8px;
     align-items: center;
 }
-.nav_item {
+
+nav button {
     border: none;
     background-color: white;
     color: black;
@@ -18,18 +19,17 @@
     width: max-content;
     white-space: nowrap;
 }
-.navigation_bar form {
-    margin: auto;
-}
 
-.search {
+nav form {
     display: flex;
     width: 100%;
     margin-right: 90px;
     position: relative;
     right: 10px;
+    margin: auto;
 }
-.search_bar {
+
+nav form input {
     border: 1px solid black;
     padding: 0px 2.4rem 0px 2.4rem;
     display: flex;
@@ -40,22 +40,12 @@
     margin-right: 2px;
     background-color: rgba(0, 0, 0, 0.029);
 }
-.sign_up {
-    background-color: black;
-    color: white;
-    font-weight: 900;
-    height: 40px;
-    width: max-content;
-    padding: 0px 15px 0px 15px;
+
+nav form input:focus {
+    outline: none;
 }
-.log_in {
-    border: 1px solid black;
-    font-weight: 900;
-    height: 40px;
-    width: max-content;
-    padding: 0px 20px 0px 20px;
-}
-.search_button {
+
+nav form button {
     border: none;
     position: relative;
     background: rgba(76, 175, 80, 0);
@@ -70,13 +60,31 @@
     top: 4px;
 }
 
-.globe {
+.sign_up {
+    background-color: black;
+    color: white;
+    font-weight: 900;
+    height: 40px;
+    width: max-content;
+    padding: 0px 15px 0px 15px;
+}
+
+.log_in {
     border: 1px solid black;
-    margin-right: 8px;
+    font-weight: 900;
+    height: 40px;
+    width: max-content;
+    padding: 0px 20px 0px 20px;
+}
+
+.cart {
     padding: 11px 14px;
     height: max-content;
 }
-.cart {
+
+.globe {
+    border: 1px solid black;
+    margin-right: 8px;
     padding: 11px 14px;
     height: max-content;
 }
@@ -86,18 +94,21 @@
         display: none;
     }
 }
+
 @media (max-width: 950px) {
     .udemy_teach {
         display: none;
     }
 }
+
 @media (max-width: 833px) {
     .cat {
         display: none;
     }
 }
+
 @media (max-width: 692px) {
-    .search {
+    nav form {
         visibility: hidden;
     }
     .cart {
@@ -107,10 +118,10 @@
 
 @media (max-width: 500px) {
     .globe,
-    .search {
+    nav form {
         display: none;
     }
-    .navigation_bar {
+    nav {
         flex-direction: column;
         margin-top: 40px;
     }
