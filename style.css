@@ -153,9 +153,6 @@ header div div {
     .cat {
         display: none;
     }
-}
-
-@media (max-width: 692px) {
     header div {
         background-image: url(assets/small_alarm.png);
     }
@@ -169,7 +166,14 @@ header div div {
     header div div p {
         font-size: larger;
     }
+}
+@media (max-width: 576px) {
+    header div div p {
+        font-size: large;
+    }
+}
 
+@media (max-width: 692px) {
     .cart,
     nav form,
     .sign_up,
