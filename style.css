@@ -58,8 +58,7 @@ nav form button {
     left: 35px;
 }
 
-
-.menu_icon{
+.menu_icon {
     display: none;
 }
 .logo {
@@ -119,10 +118,6 @@ header div {
     margin: auto;
 }
 header div div {
-    border: none;
-    font-size: 19px;
-    height: 42%;
-    width: 29%;
     min-height: 42%;
     min-width: 337px;
     display: inline-block;
@@ -130,12 +125,18 @@ header div div {
     background-color: white;
     padding: 0.1rem 1.3rem 2.3rem 1.3rem;
     position: relative;
+    font-size: 19px;
+    height: 42%;
+    width: 29%;
     top: 15%;
     left: 5%;
     box-shadow: 1px 1px 19px rgba(128, 128, 128, 0.31);
     line-height: 29px;
 }
 
+.small_header {
+    display: none;
+}
 @media (max-width: 1300px) {
     .udemy_business {
         display: none;
@@ -155,13 +156,33 @@ header div div {
 }
 
 @media (max-width: 692px) {
-    .cart, nav form, .sign_up, .log_in,.globe {
+    header div {
+        background-image: url(assets/small_alarm.png);
+    }
+    header div div {
+        height: 42%;
+        width: 84%;
+        top: 90%;
+        left: 5%;
+        background-color: white;
+    }
+    header div div p {
+        font-size: larger;
+    }
+
+    .cart,
+    nav form,
+    .sign_up,
+    .log_in,
+    .globe {
         display: none;
     }
-    .menu_icon{
+
+    .menu_icon {
         display: block;
         font-size: 25px;
     }
+
     nav {
         justify-content: space-between;
     }
