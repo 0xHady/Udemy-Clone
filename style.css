@@ -99,8 +99,9 @@ nav form button {
 }
 
 .page {
-    width: 90%;
+    width: 70%;
     margin: auto;
+    /* border: 1px solid red; */
 }
 
 /* Header  */
@@ -137,6 +138,107 @@ header div div {
 .small_header {
     display: none;
 }
+
+.break {
+    height: 40px;
+}
+/* Courses */
+
+.courses h1{
+    font-size: 37px;
+    margin: 0px;
+}
+.courses p{
+    font-size: larger;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.courses_categories {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    font-weight: bold;
+    color: gray;
+    padding: 0px;
+    width: 750px;
+    min-width: 750px;
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.courses_categories li:first-child{
+    color: black;
+}
+
+.courses_box {
+    border: 1px solid rgba(128, 128, 128, 0.365);
+}
+.courses_box h2 {
+    font-size: x-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.courses_box p{
+    width: 60%;
+    font-size: 16px;
+    color: rgb(62, 62, 62);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: 22px;
+}
+.courses_box div{
+    margin: 30px;
+}
+.courses_box div button {
+    border: 1px solid black;
+    padding: 12px 15px;
+    background-color: white;
+    font-size: 14px;
+    font-weight:bold ;
+    color: rgb(43, 43, 43);
+}
+
+.courses_list ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+.courses_list ul li div{
+    margin:0px 20px 10px -10px;
+}
+.courses_list ul li div img {
+    height: 132px;
+    width: 232px;
+    border: 1px solid grey;
+}
+.courses_list ul li div .title{
+    width: 232px;
+    margin: 0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+}
+.courses_list ul li div .author{
+    width:232px;
+    margin: 6px 0px 3px 0px;
+    font-size: small;
+    font-weight: 100;
+}
+.courses_list ul li div .price {
+    display: inline;
+    width:232px;
+    margin: 0px;
+    font-size: 24px;
+}
+.courses_list ul li div .old_price {
+    display: inline;
+    font-weight: 120;
+    font-size: 15px;
+    text-decoration: line-through;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: relative;
+    left: 10px;
+}
+
+footer{
+    height: 300px;
+}
 @media (max-width: 1300px) {
     .udemy_business {
         display: none;
@@ -150,6 +252,16 @@ header div div {
 }
 
 @media (max-width: 833px) {
+    .courses_categories li{
+        margin-right: 30px;
+    }
+    .courses_categories{
+        flex-wrap: wrap;
+        width: auto;
+        min-width: 10px;
+        justify-content: flex-start;
+        line-height: 40px;
+    }
     .cat {
         display: none;
     }
@@ -165,6 +277,9 @@ header div div {
     }
     header div div p {
         font-size: larger;
+    }
+    .break {
+        height: 230px;
     }
 }
 @media (max-width: 576px) {
