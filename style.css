@@ -58,6 +58,10 @@ nav form button {
     left: 35px;
 }
 
+
+.menu_icon{
+    display: none;
+}
 .logo {
     border: none;
     height: 2.1rem;
@@ -151,21 +155,14 @@ header div div {
 }
 
 @media (max-width: 692px) {
-    nav form {
-        visibility: hidden;
-    }
-    .cart {
+    .cart, nav form, .sign_up, .log_in,.globe {
         display: none;
     }
-}
-
-@media (max-width: 500px) {
-    .globe,
-    nav form {
-        display: none;
+    .menu_icon{
+        display: block;
+        font-size: 25px;
     }
     nav {
-        flex-direction: column;
-        margin-top: 40px;
+        justify-content: space-between;
     }
 }
