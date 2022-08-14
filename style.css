@@ -184,7 +184,7 @@ header div div {
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     line-height: 22px;
 }
-.courses_box div {
+.courses_box > div {
     margin: 30px;
 }
 .courses_box div button {
@@ -201,7 +201,7 @@ header div div {
     flex-wrap: wrap;
     list-style: none;
 }
-.courses_list ul li div {
+.courses_list ul li .course {
     margin: 0px 27px 30px -10px;
 }
 .courses_list ul li div img {
@@ -236,17 +236,22 @@ header div div {
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     position: relative;
     left: 10px;
+    margin: 0px;
 }
 
 footer {
     height: 300px;
 }
 
-.courses_list ul li div i {
-    font-size: small;
+.checked {
     color: darkorange;
-    margin-bottom: 5px;
 }
+
+.rating {
+    width: 100%;
+    font-size: small;
+}
+
 @media (max-width: 1300px) {
     .udemy_business {
         display: none;
