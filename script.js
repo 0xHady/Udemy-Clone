@@ -1,41 +1,50 @@
-let courses_list = document.querySelector(".courses_ul")
+let courses_list = document.querySelector(".courses_ul");
+let current_query = " ";
 
-function addCourse(item){
-    let course_item = document.createElement('li');
-    let course = document.createElement('div');
-    let course_img = document.createElement('img');
-    let course_title = document.createElement('h4');
-    let course_author = document.createElement('h4');
-    let rating = document.createElement('div');
-    let course_price = document.createElement('h4');
-    let course_old_price = document.createElement('h4');
+const fetchCourses = async () => {
+    let response = await fetch("http://localhost:3000/courses");
+    let json = await response.json();
+    return json;
+};
 
+fetchCourses().then((x) => {
+    x.forEach(addCourse);
+});
 
-    course.classList.add('course');
-    course_img.setAttribute('src',item.image)
-    course_title.classList.add('title');
-    course_author.classList.add('author');
-    rating.classList.add('rating');
-    course_price.classList.add('price');
-    course_old_price.classList.add('old_price');
+function addCourse(item) {
+    let course_item = document.createElement("li");
+    let course = document.createElement("div");
+    let course_img = document.createElement("img");
+    let course_title = document.createElement("h4");
+    let course_author = document.createElement("h4");
+    let rating = document.createElement("div");
+    let course_price = document.createElement("h4");
+    let course_old_price = document.createElement("h4");
+
+    course.classList.add("course");
+    course_img.setAttribute("src", item.image);
+    course_title.classList.add("title");
+    course_author.classList.add("author");
+    rating.classList.add("rating");
+    course_price.classList.add("price");
+    course_old_price.classList.add("old_price");
 
     course_title.textContent = item.title;
     course_author.textContent = item.author;
-    course_price.textContent = "E£"+ item.price;
-    course_old_price.textContent = "E£"+ item.old_price;
+    course_price.textContent = "E£" + item.price;
+    course_old_price.textContent = "E£" + item.old_price;
 
-    for(let i = 0 ; i < item.rating ; i++){
-        let star = document.createElement('span');
-        star.classList.add('fa','fa-star','checked');
+    for (let i = 0; i < item.rating; i++) {
+        let star = document.createElement("span");
+        star.classList.add("fa", "fa-star", "checked");
         rating.appendChild(star);
     }
 
-    for(let i = item.rating ; i < 5 ; i++){
-        let star = document.createElement('span');
-        star.classList.add('fa','fa-star');
+    for (let i = item.rating; i < 5; i++) {
+        let star = document.createElement("span");
+        star.classList.add("fa", "fa-star");
         rating.appendChild(star);
     }
-
 
     course_item.appendChild(course);
     course.appendChild(course_img);
@@ -45,15 +54,18 @@ function addCourse(item){
     course.appendChild(course_price);
     course.appendChild(course_old_price);
 
-    courses_list.appendChild(course_item);
+    if(item.title.toLowerCase().search(current_query.toLowerCase()) != -1)
+        courses_list.appendChild(course_item);
 }
 
-const fetchCourses = async () => {
-    let response = await fetch('http://localhost:3000/courses');
-    let json = await response.json();
-    return json;
-}
 
-fetchCourses().then((x) => {
-    x.forEach(addCourse)
-});
+function search() {
+    let query = document.getElementById("search_query").value;
+    console.log("query :>> ", query);
+    current_query = query;
+
+    fetchCourses().then((x) => {
+        courses_list.innerHTML = "";
+        x.forEach(addCourse);
+    });
+}

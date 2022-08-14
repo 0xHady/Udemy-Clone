@@ -32,9 +32,9 @@
             <button class="cat" type="button">Categories</button>
 
             <!-- Search  -->
-            <form action="nothing">
-                <button type="submit"><i class="fa fa-search"></i></button>
-                <input type="text" placeholder="Search for anything" />
+            <form>
+                <button type="button" onclick ="search()"><i class="fa fa-search"></i></button>
+                <input id="search_query" type="text" placeholder="Search for anything" />
             </form>
             <!-- ----- -->
 
@@ -102,9 +102,7 @@
                     </div>
                     <section class="courses_list">
                         <ul class="courses_ul">
-                            <li>
                                 <!-- add courses via json-server -->
-                            </li>
                         </ul>
                     </section>
                 </section>
