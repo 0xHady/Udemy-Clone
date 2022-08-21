@@ -89,14 +89,58 @@
                     Choose from 185,000 courses with new additions published
                     every month
                 </p>
-                <ul class="courses_categories">
-                    <li>Python</li>
-                    <li>Excel</li>
-                    <li>Web Development</li>
-                    <li>JavaScript</li>
-                    <li>Data Science</li>
-                    <li>AWS Certification</li>
-                    <li>Drawing</li>
+
+                <!-- <ul class="courses_categories nav">
+                    <li><button>Python</button></li>
+                    <li><button>Excel</button></li>
+                    <li><button>Web Development</button></li>
+                    <li><button>JavaScript</button></li>
+                    <li><button>Data Science</button></li>
+                    <li><button>AWS Certification</button></li>
+                    <li><button>Drawing</button></li>
+                </ul> -->
+
+                <ul class="nav">
+                    <li class="nav-item"></li> <!-- 🤷‍♂️ -->
+                    <li id="cat1" class="nav-item">
+                        <button onclick="cat_search('python','cat1')">
+                            Python
+                        </button>
+                    </li>
+                    <li id="cat2" class="nav-item">
+                        <button onclick="cat_search('Excel','cat2')">
+                            Excel
+                        </button>
+                    </li>
+                    <li id="cat3" class="nav-item">
+                        <button onclick="cat_search('Web Development','cat3')">
+                            Web Development
+                        </button>
+                    </li>
+                    <li id="cat4" class="nav-item">
+                        <button onclick="cat_search('JavaScript','cat4')">
+                            JavaScript
+                        </button>
+                    </li>
+                    <li id="cat5" class="nav-item">
+                        <button onclick="cat_search('Data Science','cat5')">
+                            Data Science
+                        </button>
+                    </li>
+                    <li id="cat6" class="nav-item">
+                        <button onclick="cat_search('AWS Certification','cat6')">
+                            AWS Certification
+                        </button>
+                    </li>
+                    <li id="cat7" class="nav-item">
+                        <button onclick="cat_search('Drawing','cat7')">
+                            Drawing
+                        </button>
+                    </li>
+                    <li id="cat" class="nav-item">
+                        <button onclick="cat_search('','cat')">
+                        </button>
+                    </li>
                 </ul>
 
                 <section class="courses_box">

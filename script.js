@@ -69,3 +69,24 @@ function search() {
         x.forEach(addCourse);
     });
 }
+
+function cat_search(Query,id){
+    let element = document.getElementById(id);
+
+    element.parentNode.childNodes.forEach((child)=>{
+        if(child.nodeName === 'LI'){
+            child.classList.remove("active");
+        }
+    });
+    element.classList.add("active");
+    
+
+    let query = Query;
+    console.log("query :>> ", query);
+    current_query = query;
+
+    fetchCourses().then((x) => {
+        courses_list.innerHTML = "";
+        x.forEach(addCourse);
+    });
+}

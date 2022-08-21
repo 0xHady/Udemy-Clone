@@ -98,6 +98,60 @@
             "price": "729.99",
             "old_price": "2999",
             "rating": 4
+        },
+        {
+            "id": 11,
+            "title": "Data Science Course for Beginners",
+            "author": "Jose Portilla",
+            "image": "https://img-c.udemycdn.com/course/480x270/449532_2aa9_7.jpg",
+            "price": "729.99",
+            "old_price": "2999",
+            "rating": 4
+        },
+        {
+            "id": 12,
+            "title": "Web Development Course for Beginners",
+            "author": "Jose Portilla",
+            "image": "https://img-c.udemycdn.com/course/480x270/567828_67d0.jpg",
+            "price": "729.99",
+            "old_price": "2999",
+            "rating": 4
+        },
+        {
+            "id": 13,
+            "title": "Drawing Course for Beginners",
+            "author": "Jose Portilla",
+            "image": "https://img-c.udemycdn.com/course/480x270/567828_67d0.jpg",
+            "price": "729.99",
+            "old_price": "2999",
+            "rating": 4
+        },
+        {
+            "id": 14,
+            "title": "AWS Certification Course for Beginners",
+            "author": "Jose Portilla",
+            "image": "https://img-c.udemycdn.com/course/480x270/535622_3bc0.jpg",
+            "price": "729.99",
+            "old_price": "2999",
+            "rating": 4
+        },
+        {
+            "id": 15,
+            "title": "Excel Course for Beginners",
+            "author": "Jose Portilla",
+            "image": "https://img-c.udemycdn.com/course/240x135/394676_ce3d_5.jpg",
+            "price": "729.99",
+            "old_price": "2999",
+            "rating": 4
+        },
+        {
+            "id": 16,
+            "title": "JavaScript Course for Beginners",
+            "author": "Jose Portilla",
+            "image": "https://img-c.udemycdn.com/course/480x270/482754_7146_6.jpg",
+            "price": "729.99",
+            "old_price": "2999",
+            "rating": 4
         }
     ]
 }

@@ -157,19 +157,18 @@ header div div p {
         Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.courses_categories {
-    display: flex;
-    justify-content: space-between;
-    list-style-type: none;
+.nav-item button{
+    border: none;
+    background: none;
     font-weight: bold;
-    color: gray;
+    list-style: none;
     padding: 0px;
-    width: 750px;
-    min-width: 750px;
-
+    margin-right: 10px;
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-}
-.courses_categories li:first-child {
+    color: grey;
+ }
+
+.nav-item + .active button{
     color: black;
 }
 
@@ -254,6 +253,7 @@ footer {
     width: 100%;
     font-size: small;
 }
+
 
 @media (max-width: 1300px) {
     .udemy_business {
