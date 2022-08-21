@@ -174,6 +174,7 @@ header div div p {
 
 .courses_box {
     border: 1px solid rgba(128, 128, 128, 0.365);
+    /* height: 900px; */
 }
 .courses_box h2 {
     font-size: x-large;
@@ -197,21 +198,63 @@ header div div p {
     font-weight: bold;
     color: rgb(43, 43, 43);
 }
-
-.courses_list ul {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
+.carousel-control-next,.carousel-control-prev {
+    height: 50px;
+    width: 50px;
+    border-radius: 30px;
+    /* background-color: black; */
+    /* border: none; */
+    /* position: relative; */
+    /* top: 20%; */
 }
-.courses_list ul li .course {
+.carousel-control-next {
+    /* position: sticky; */
+    margin: 100px 0px;
+    margin-left: 29px;
+}
+
+.carousel-control-prev {
+    /* position: sticky; */
+    /* align-self: flex-start; */
+    margin: 100px 0px;
+    margin-right: 44px;
+
+}
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    /* background-color: black; */
+    /* border: none; */
+}
+
+.carousel {
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* flex-wrap: wrap; */
+    /* height: 500px; */
+    /* border: 4px solid red; */
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+.courses_ul {
+    /* border: 2px solid green; */
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+
+.courses_list .courses_ul .course {
     margin: 0px 27px 30px -10px;
 }
-.courses_list ul li div img {
+.courses_list .courses_ul .course img {
     height: 132px;
     width: 232px;
     border: 1px solid grey;
 }
-.courses_list ul li div .title {
+
+.courses_list .courses_ul .course .title {
     width: 232px;
     margin: 0px;
     margin-top: 2px;
@@ -219,18 +262,21 @@ header div div p {
     font-size: 15px;
     font-weight: bolder;
 }
-.courses_list ul li div .author {
+
+.courses_list .courses_ul .course .author {
     width: 232px;
     margin: 6px 0px 3px 0px;
     font-size: small;
     font-weight: 100;
 }
-.courses_list ul li div .price {
+
+.courses_list .courses_ul .course .price {
     display: inline;
     width: 232px;
     margin: 0px;
 }
-.courses_list ul li div .old_price {
+
+.courses_list .courses_ul .course .old_price {
     display: inline;
     font-weight: 120;
     font-size: 15px;

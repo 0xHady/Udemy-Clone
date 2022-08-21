@@ -1,4 +1,5 @@
 let courses_list = document.querySelector(".courses_ul");
+// "carousel-inner courses_ul"
 let current_query = " ";
 
 const fetchCourses = async () => {
@@ -12,8 +13,14 @@ fetchCourses().then((x) => {
 });
 
 function addCourse(item) {
-    let course_item = document.createElement("li");
-    let course = document.createElement("div");
+    // let inner = document.createElement("div");
+    // inner.classList.add("carousel-inner courses_ul")
+    // let actv = document.createElement("span");
+    // actv.classList.add("carousel-item active");
+    // inner.appendChild(actv);
+
+
+    let course = document.createElement("span");
     let course_img = document.createElement("img");
     let course_title = document.createElement("h4");
     let course_author = document.createElement("h4");
@@ -21,7 +28,7 @@ function addCourse(item) {
     let course_price = document.createElement("h4");
     let course_old_price = document.createElement("h4");
 
-    course.classList.add("course");
+    course.classList.add("course","carousel-item","d-inline");
     course_img.setAttribute("src", item.image);
     course_title.classList.add("title");
     course_author.classList.add("author");
@@ -46,16 +53,17 @@ function addCourse(item) {
         rating.appendChild(star);
     }
 
-    course_item.appendChild(course);
     course.appendChild(course_img);
     course.appendChild(course_title);
     course.appendChild(course_author);
     course.appendChild(rating);
     course.appendChild(course_price);
     course.appendChild(course_old_price);
+    
+    // inner.appendChild(course);
 
     if(item.title.toLowerCase().search(current_query.toLowerCase()) != -1)
-        courses_list.appendChild(course_item);
+        courses_list.appendChild(course);
 }
 
 

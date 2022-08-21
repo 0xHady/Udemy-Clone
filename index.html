@@ -90,18 +90,9 @@
                     every month
                 </p>
 
-                <!-- <ul class="courses_categories nav">
-                    <li><button>Python</button></li>
-                    <li><button>Excel</button></li>
-                    <li><button>Web Development</button></li>
-                    <li><button>JavaScript</button></li>
-                    <li><button>Data Science</button></li>
-                    <li><button>AWS Certification</button></li>
-                    <li><button>Drawing</button></li>
-                </ul> -->
-
                 <ul class="nav">
-                    <li class="nav-item"></li> <!-- 🤷‍♂️ -->
+                    <li class="nav-item"></li>
+                    <!-- 🤷‍♂️ -->
                     <li id="cat1" class="nav-item">
                         <button onclick="cat_search('python','cat1')">
                             Python
@@ -128,7 +119,9 @@
                         </button>
                     </li>
                     <li id="cat6" class="nav-item">
-                        <button onclick="cat_search('AWS Certification','cat6')">
+                        <button
+                            onclick="cat_search('AWS Certification','cat6')"
+                        >
                             AWS Certification
                         </button>
                     </li>
@@ -138,8 +131,7 @@
                         </button>
                     </li>
                     <li id="cat" class="nav-item">
-                        <button onclick="cat_search('','cat')">
-                        </button>
+                        <button onclick="cat_search('','cat')"></button>
                     </li>
                 </ul>
 
@@ -158,11 +150,43 @@
                         </p>
                         <button type="button">Explore Python</button>
                     </div>
-                    <section class="courses_list">
-                        <ul class="courses_ul">
-                            <!-- add courses via json-server -->
-                        </ul>
-                    </section>
+
+                    <div
+                        id="carouselExampleControls"
+                        class="carousel slide courses_list"
+                        data-bs-ride="carousel"
+                    >
+                        <div class="carousel-inner courses_ul">
+                            <span class="carousel-item active"> </span>
+                        </div>
+
+                            <button
+                                class="carousel-control-prev bg-black opacity-100"
+                                type="button"
+                                data-bs-target="#carouselExampleControls"
+                                data-bs-slide="prev"
+                            >
+                                <span
+                                    class="carousel-control-prev-icon"
+                                    aria-hidden="true"
+                                ></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button
+                                class="carousel-control-next bg-black opacity-100"
+                                type="button"
+                                data-bs-target="#carouselExampleControls"
+                                data-bs-slide="next"
+                            >
+                                <span
+                                    class="carousel-control-next-icon"
+                                    aria-hidden="true"
+                                ></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                    </div>
+
+                    <!-- ------------------------------- -->
                 </section>
             </section>
         </div>
