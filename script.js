@@ -26,7 +26,7 @@ function addCourse(item) {
     course_title.classList.add("title");
     course_author.classList.add("author");
     rating.classList.add("rating");
-    course_price.classList.add("price");
+    course_price.classList.add("price","h5");
     course_old_price.classList.add("old_price");
 
     course_title.textContent = item.title;

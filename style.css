@@ -101,7 +101,6 @@ nav form button {
 .page {
     width: 70%;
     margin: auto;
-    /* border: 1px solid red; */
 }
 
 /* Header  */
@@ -111,12 +110,11 @@ header {
     display: flex;
 }
 header div {
-    height: 400px;
+    height: 530px;
     width: 83rem;
     background-image: url(assets/alarm_background.jpg);
     background-repeat: no-repeat;
     background-position: center;
-    margin: auto;
 }
 header div div {
     min-height: 42%;
@@ -126,13 +124,18 @@ header div div {
     background-color: white;
     padding: 0.1rem 1.3rem 2.3rem 1.3rem;
     position: relative;
-    font-size: 19px;
     height: 42%;
     width: 29%;
     top: 15%;
     left: 5%;
     box-shadow: 1px 1px 19px rgba(128, 128, 128, 0.31);
     line-height: 29px;
+}
+header div div h1{
+    margin-top: 20px;
+}
+header div div p {
+    font-size: 19px;
 }
 
 .small_header {
@@ -212,8 +215,10 @@ header div div {
 .courses_list ul li div .title {
     width: 232px;
     margin: 0px;
+    margin-top: 2px;
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     font-size: 15px;
+    font-weight: bolder;
 }
 .courses_list ul li div .author {
     width: 232px;
@@ -225,8 +230,6 @@ header div div {
     display: inline;
     width: 232px;
     margin: 0px;
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-    font-size: 20px;
 }
 .courses_list ul li div .old_price {
     display: inline;
@@ -293,11 +296,6 @@ footer {
     }
     .break {
         height: 230px;
-    }
-}
-@media (max-width: 576px) {
-    header div div p {
-        font-size: large;
     }
 }
 
