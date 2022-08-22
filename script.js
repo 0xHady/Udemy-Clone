@@ -1,5 +1,4 @@
 let courses_list = document.querySelector(".courses_ul");
-// "carousel-inner courses_ul"
 let current_query = " ";
 
 const fetchCourses = async () => {
