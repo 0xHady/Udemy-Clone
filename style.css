@@ -2,6 +2,7 @@
 body {
     margin: 0;
 }
+
 nav {
     height: 60px;
     display: flex;
@@ -115,6 +116,7 @@ header div {
     background-image: url(assets/alarm_background.jpg);
     background-repeat: no-repeat;
     background-position: center;
+    background-size: contain;
 }
 header div div {
     min-height: 42%;
@@ -144,6 +146,7 @@ header div div p {
 
 .break {
     height: 40px;
+    margin: 20px 0px;
 }
 /* Courses */
 
@@ -174,6 +177,7 @@ header div div p {
 
 .courses_box {
     border: 1px solid rgba(128, 128, 128, 0.365);
+    max-width: 1286px;
 }
 .courses_box h2 {
     font-size: x-large;
@@ -270,6 +274,13 @@ header div div p {
     margin: 0px;
 }
 
+.categories {
+    /* border: 12px solid red; */
+    max-width: 1286px;
+}
+.cat_card {
+    width: 20rem;
+}
 footer {
     height: 300px;
 }

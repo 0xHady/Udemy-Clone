@@ -67,7 +67,7 @@ function addCourse(item) {
     
 
     if(item.title.toLowerCase().search(current_query.toLowerCase()) != -1){
-        if(carousel_item.firstChild.childElementCount == 5){
+        if(carousel_item.firstChild.childElementCount == 4){
             carousel_item = new_carousel_item();
         }
         carousel_item.firstChild.appendChild(course);
@@ -111,3 +111,38 @@ function cat_search(Query,id){
         x.forEach(addCourse);
     });
 }
+
+
+let cats = document.querySelector(".cat_row");
+function addCategories(item){
+    let card = document.createElement("div");
+    card.classList.add("card","cat_card","border-0","mb-3");
+    card.classList.add("col","col-lg-3","col-md-4","col-sm-12");
+
+    let img_div = document.createElement("div");
+    img_div.classList.add("card-img-top");
+
+    let img = document.createElement("img");
+    img.setAttribute("src",item.image);
+
+    img_div.appendChild(img);
+
+    let title = document.createElement("div");
+    title.classList.add("fw-bold");
+    title.textContent = item.title;
+
+    card.appendChild(img_div);
+    card.appendChild(title);
+
+    cats.appendChild(card);
+}
+
+const fetchCats = async () => {
+    let response = await fetch("http://localhost:3000/categories");
+    let json = await response.json();
+    return json;
+};
+
+fetchCats().then((x) => {
+    x.forEach(addCategories);
+});

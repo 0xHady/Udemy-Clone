@@ -153,5 +153,43 @@
             "old_price": "2999",
             "rating": 4
         }
+    ],
+
+    "categories":[
+        {
+            "id": 1,
+            "image": "https://s.udemycdn.com/home/top-categories/lohp-category-design-v2.jpg",
+            "title": "Design"
+        },
+        {
+            "id": 2,
+            "image": "https://s.udemycdn.com/home/top-categories/lohp-category-development-v2.jpg",
+            "title": "Development"
+        },
+        {
+            "id": 3,
+            "image": "https://s.udemycdn.com/home/top-categories/lohp-category-marketing-v2.jpg",
+            "title": "Marketing"
+        },
+        {
+            "id": 4,
+            "image": "https://s.udemycdn.com/home/top-categories/lohp-category-it-and-software-v2.jpg",
+            "title": "IT and Software"
+        },
+        {
+            "id": 5,
+            "image": "https://s.udemycdn.com/home/top-categories/lohp-category-personal-development-v2.jpg",
+            "title": "Personal Development"
+        },
+        {
+            "id": 6,
+            "image": "https://s.udemycdn.com/home/top-categories/lohp-category-photography-v2.jpg",
+            "title": "Photography"
+        },
+        {
+            "id": 7,
+            "image": "https://s.udemycdn.com/home/top-categories/lohp-category-music-v2.jpg",
+            "title": "Music"
+        }
     ]
 }
