@@ -12,15 +12,21 @@ fetchCourses().then((x) => {
     x.forEach(addCourse);
 });
 
+
+function new_carousel_item(){
+    let row = document.createElement("div");
+    row.classList.add("row","w-100");
+    let carousel_item = document.createElement("div");
+    carousel_item.classList.add("carousel-item");
+    carousel_item.appendChild(row);
+    return carousel_item;
+}
+let carousel_item = new_carousel_item();
+carousel_item.classList.add("active");
+
 function addCourse(item) {
-    // let inner = document.createElement("div");
-    // inner.classList.add("carousel-inner courses_ul")
-    // let actv = document.createElement("span");
-    // actv.classList.add("carousel-item active");
-    // inner.appendChild(actv);
 
-
-    let course = document.createElement("span");
+    let course = document.createElement("div");
     let course_img = document.createElement("img");
     let course_title = document.createElement("h4");
     let course_author = document.createElement("h4");
@@ -28,7 +34,7 @@ function addCourse(item) {
     let course_price = document.createElement("h4");
     let course_old_price = document.createElement("h4");
 
-    course.classList.add("course","carousel-item","d-inline");
+    course.classList.add("course");
     course_img.setAttribute("src", item.image);
     course_title.classList.add("title");
     course_author.classList.add("author");
@@ -60,15 +66,21 @@ function addCourse(item) {
     course.appendChild(course_price);
     course.appendChild(course_old_price);
     
-    // inner.appendChild(course);
 
-    if(item.title.toLowerCase().search(current_query.toLowerCase()) != -1)
-        courses_list.appendChild(course);
+    if(item.title.toLowerCase().search(current_query.toLowerCase()) != -1){
+        if(carousel_item.firstChild.childElementCount == 5){
+            carousel_item = new_carousel_item();
+        }
+        carousel_item.firstChild.appendChild(course);
+        courses_list.appendChild(carousel_item);
+    }
 }
 
 
 function search() {
     let query = document.getElementById("search_query").value;
+    carousel_item = new_carousel_item();
+    carousel_item.classList.add("active");
     console.log("query :>> ", query);
     current_query = query;
 
@@ -80,6 +92,8 @@ function search() {
 
 function cat_search(Query,id){
     let element = document.getElementById(id);
+    carousel_item = new_carousel_item();
+    carousel_item.classList.add("active");
 
     element.parentNode.childNodes.forEach((child)=>{
         if(child.nodeName === 'LI'){
