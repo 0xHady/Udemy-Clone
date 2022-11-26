@@ -2,6 +2,7 @@
 body {
     margin: 0;
 }
+
 nav {
     height: 60px;
     display: flex;
@@ -101,7 +102,6 @@ nav form button {
 .page {
     width: 70%;
     margin: auto;
-    /* border: 1px solid red; */
 }
 
 /* Header  */
@@ -111,12 +111,12 @@ header {
     display: flex;
 }
 header div {
-    height: 400px;
+    height: 530px;
     width: 83rem;
     background-image: url(assets/alarm_background.jpg);
     background-repeat: no-repeat;
     background-position: center;
-    margin: auto;
+    background-size: contain;
 }
 header div div {
     min-height: 42%;
@@ -126,13 +126,18 @@ header div div {
     background-color: white;
     padding: 0.1rem 1.3rem 2.3rem 1.3rem;
     position: relative;
-    font-size: 19px;
     height: 42%;
     width: 29%;
     top: 15%;
     left: 5%;
     box-shadow: 1px 1px 19px rgba(128, 128, 128, 0.31);
     line-height: 29px;
+}
+header div div h1{
+    margin-top: 20px;
+}
+header div div p {
+    font-size: 19px;
 }
 
 .small_header {
@@ -141,6 +146,7 @@ header div div {
 
 .break {
     height: 40px;
+    margin: 20px 0px;
 }
 /* Courses */
 
@@ -154,24 +160,24 @@ header div div {
         Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.courses_categories {
-    display: flex;
-    justify-content: space-between;
-    list-style-type: none;
+.nav-item button{
+    border: none;
+    background: none;
     font-weight: bold;
-    color: gray;
+    list-style: none;
     padding: 0px;
-    width: 750px;
-    min-width: 750px;
-
+    margin-right: 10px;
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-}
-.courses_categories li:first-child {
+    color: grey;
+ }
+
+.nav-item + .active button{
     color: black;
 }
 
 .courses_box {
     border: 1px solid rgba(128, 128, 128, 0.365);
+    max-width: 1286px;
 }
 .courses_box h2 {
     font-size: x-large;
@@ -184,7 +190,7 @@ header div div {
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     line-height: 22px;
 }
-.courses_box div {
+.courses_box > div {
     margin: 30px;
 }
 .courses_box div button {
@@ -195,40 +201,69 @@ header div div {
     font-weight: bold;
     color: rgb(43, 43, 43);
 }
-
-.courses_list ul {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
+.carousel-control-next,.carousel-control-prev {
+    height: 50px;
+    width: 50px;
+    border-radius: 30px;
 }
-.courses_list ul li div {
+.carousel-control-next {
+    margin: 100px 0px;
+    margin-left: 29px;
+}
+
+.carousel-control-prev {
+    margin: 100px 0px;
+    margin-right: 44px;
+
+}
+.carousel-item {
+    margin: 19px;
+}
+.courses_ul {
+    margin: 30px;
+    margin-left: 48px;
+    display: flex;
+    width: 96%;
+}
+.carousel-inner {
+    display: flex;
+}
+.course {
+    width: 240px;
+}
+
+.courses_list .courses_ul .course {
     margin: 0px 27px 30px -10px;
 }
-.courses_list ul li div img {
+.courses_list .courses_ul .course img {
     height: 132px;
     width: 232px;
     border: 1px solid grey;
 }
-.courses_list ul li div .title {
+
+.courses_list .courses_ul .course .title {
     width: 232px;
     margin: 0px;
+    margin-top: 2px;
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     font-size: 15px;
+    font-weight: bolder;
 }
-.courses_list ul li div .author {
+
+.courses_list .courses_ul .course .author {
     width: 232px;
     margin: 6px 0px 3px 0px;
     font-size: small;
     font-weight: 100;
 }
-.courses_list ul li div .price {
+
+.courses_list .courses_ul .course .price {
     display: inline;
     width: 232px;
     margin: 0px;
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-    font-size: 20px;
 }
-.courses_list ul li div .old_price {
+
+.courses_list .courses_ul .course .old_price {
     display: inline;
     font-weight: 120;
     font-size: 15px;
@@ -236,17 +271,30 @@ header div div {
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     position: relative;
     left: 10px;
+    margin: 0px;
 }
 
+.categories {
+    /* border: 12px solid red; */
+    max-width: 1286px;
+}
+.cat_card {
+    width: 20rem;
+}
 footer {
     height: 300px;
 }
 
-.courses_list ul li div i {
-    font-size: small;
+.checked {
     color: darkorange;
-    margin-bottom: 5px;
 }
+
+.rating {
+    width: 100%;
+    font-size: small;
+}
+
+
 @media (max-width: 1300px) {
     .udemy_business {
         display: none;
@@ -288,11 +336,6 @@ footer {
     }
     .break {
         height: 230px;
-    }
-}
-@media (max-width: 576px) {
-    header div div p {
-        font-size: large;
     }
 }
 
